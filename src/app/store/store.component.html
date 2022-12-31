@@ -1,0 +1,30 @@
+<div class="store-page">
+  <div class="store-page-list">
+    <h2 class="title">My Location</h2>
+
+    <div>My Latitude: {{ myCoords.lat }}</div>
+    <div>My Longitude: {{ myCoords.long }}</div>
+
+    <h2 class="title">Available Stores</h2>
+
+    <ol>
+      <li
+        *ngFor="let store of nearestStores(); index as storeIndex"
+        (click)="showDetails(store)"
+        class="store"
+      >
+        <b
+          ><a>{{ store.name }}</a></b
+        >
+        is
+        <b>{{ store.distance }}</b>
+        kms away
+        <span *ngIf="!storeIndex" class="badge">Nearest Store</span>
+      </li>
+    </ol>
+  </div>
+
+  <div class="store-page-detail">
+    <app-store-detail [selectedStore]="selectedStore"></app-store-detail>
+  </div>
+</div>

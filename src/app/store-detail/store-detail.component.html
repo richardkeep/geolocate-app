@@ -1,0 +1,17 @@
+<h2 class="title">Store Details</h2>
+
+<div *ngIf="selectedStore.name !== ''; else elseBlock">
+  <p>
+    Store Name: <b>{{ selectedStore.name }}</b>
+  </p>
+  <p>Store Latitude: {{ selectedStore.lat }}</p>
+  <p>Store Longitude: {{ selectedStore.long }}</p>
+  <p>Store Distance: {{ selectedStore.distance }} Kilometres</p>
+
+  <div>
+    <i>{{ selectedStore.details }}</i>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <i>Please select a store to preview</i>
+</ng-template>

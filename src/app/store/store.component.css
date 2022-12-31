@@ -1,0 +1,28 @@
+.title {
+  color: rgb(24, 58, 210);
+}
+
+.store-page {
+  display: flex;
+}
+
+.store-page-list {
+  border-right: 1px solid red;
+  padding: 10px;
+}
+.store-page-detail {
+  padding: 10px;
+}
+
+.store {
+  color: rgb(80, 36, 182);
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.badge {
+  color: white;
+  font-size: 12px;
+  background-color: red;
+  border-radius: 5%;
+}
